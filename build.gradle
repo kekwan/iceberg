@@ -435,7 +435,9 @@ project(':iceberg-flink-runtime') {
 project(':iceberg-hive-metastore') {
   dependencies {
     compile project(':iceberg-core')
-
+    compile project(':iceberg-api')
+    compile project(':iceberg-data')
+    compile project(':iceberg-parquet')
     compileOnly "org.apache.avro:avro"
 
     compileOnly("org.apache.hive:hive-metastore") {
